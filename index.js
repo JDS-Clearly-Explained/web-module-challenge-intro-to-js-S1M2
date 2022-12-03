@@ -19,6 +19,12 @@ Do the following:
 
    HINT: no function required
 */
+
+//NOTES:
+// create a variable called votingAge and assign it a number value
+// check if the age is 18 or higher
+// if it is, console log true
+// if it is not, console log false
 const votingAge = 60;
 if (votingAge >= 18){
 console.log(true);}
@@ -36,6 +42,14 @@ Do the following:
 
    HINT: no function required
 */
+
+//NOTES:
+// create a variable called firstThing and assign it a value
+// create a variable called secondThing and assign it a value
+// check if the firstThing is equal to the secondThing
+// if it is, change the value of the firstThing 
+// if it is not, do nothing
+// console log the value of the firstThing
 let firstThing = 1;
 let secondThing = 2;
 if (firstThing < secondThing){
@@ -56,6 +70,10 @@ Do the following:
    HINT: look up the Number method
 */
 
+//NOTES:
+// create a variable and assign it a string value of "1999"
+// convert the string value of "1999" to a integer value of 1999 using the Number method, passin in the string value
+// console log the result
 let myVar = '1999';
 let myNum = Number(myVar);
 console.log(myNum);
@@ -71,6 +89,7 @@ Do the following:
 */
 
 function multiply(num1, num2){
+  // multiply num1 and num2 and return the answer
   return num1 * num2;
 }
 
@@ -87,6 +106,7 @@ Do the following:
 */
 
 function dogYears(age){
+  // calculate the age in dog years and return the answer
   return age * 7;
 }
 
@@ -184,6 +204,10 @@ Use the game function below to do the following:
 RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors | Or there's a tie
 */
 
+//NOTES:
+// create a variable that randomly generates the computer's choice
+// use Math.random to determine the computer's choice
+// make a conditional that changes the variable to "rock", "paper", or "scissors" based on it's random number
 let compChoice;
 const randomVal = Math.random();
 
@@ -271,6 +295,8 @@ Using the annoyingSong function below do the following:
 */
 
 function annoyingSong(num){
+  // loop for the number of times given in the argument
+  // for each loop, return the string with the number of bottles coming from the argument
       for (let i = num; i > 0; i--) {
         return `${i} bottles of soda on the wall, ${i} bottles of soda, take one down pass it around ${i - 1} bottles of soda on the wall`;
       }
@@ -322,10 +348,17 @@ HINT - try looking up the .includes() method
 
 
 function vowelCounter(str) {
+  // create a variable to hold the vowels
   let vowels = ["a", "e", "i", "o", "u"];
+  // create a variable to hold the number of vowels or count
   let count = 0;
+  // create a variable to hold the string converted to lowercase
+  let lowerStr = str.toLowerCase();
+  // loop through the string
   for (let i = 0; i < str.length; i++) {
-    if (vowels.includes(str[i])) {
+    // check if the current letter in the string is included in the vowels array
+    if (vowels.includes(lowerStr[i])) {
+      // if it does, add 1 to the count
       count++;
     }
   }
